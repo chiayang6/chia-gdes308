@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+  
+.moving-text {
+    font-weight: bold;
+    color: white;
+    position: absolute;
+}
+
+.dragon {
+    width: 100px;
+    height: 100px;
+    background: url('chinesedragonzodiac.png') no-repeat center center; /* Background image of the dragon */
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveDragon 5s linear infinite alternate; /* Animation for dragon movement */
+}
+
+/* Gradient background */
+body {
+    background: linear-gradient(to bottom, #ffcccc, #ff9999);
+}
+
+/* Keyframes for dragon movement */
+@keyframes moveDragon {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(100% - 100px)); /* Move dragon to the right edge of the container */
+    }
+}
+
+
+  
+  
+  
+  
+  
