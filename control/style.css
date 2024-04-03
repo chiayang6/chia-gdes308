@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .screensaver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Background color of the night sky */
+    overflow: hidden;
+  }
+  
+  .sky {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .taurus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Adjust the size of the Taurus constellation */
+    height: 200px; /* Adjust the size of the Taurus constellation */
+    transform: translate(-50%, -50%);
+  }
+  
+  .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px; /* Adjust the size of the Taurus body */
+    height: 100px; /* Adjust the size of the Taurus body */
+    background-color: #fff; /* Color of the Taurus body */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .horn {
+    position: absolute;
+    top: 25%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 0 20px;
+    border-color: transparent transparent transparent #fff; /* Color of the Taurus horn */
+  }
+  
+  .left-horn {
+    left: 35%;
+    transform: rotate(45deg);
+  }
+  
+  .right-horn {
+    left: 45%;
+    transform: rotate(-45deg);
+  }
+  
+  .eye {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 20px; /* Adjust the size of the Taurus eye */
+    height: 20px; /* Adjust the size of the Taurus eye */
+    background-color: #fff; /* Color of the Taurus eye */
+    border-radius: 50%;
+  }
+  
+  .eye:before {
+    content: "";
+    position: absolute;
+    width: 10px; /* Adjust the size of the pupil */
+    height: 10px; /* Adjust the size of the pupil */
+    background-color: #000; /* Color of the pupil */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blink 2s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      height: 10px;
+    }
+    50% {
+      height: 0;
+    }
+  }
+  

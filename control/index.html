@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>control</title>
+    <style>
+        body {
+            font-family: Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(330, 70%, 59%);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .cherry-blossom {
+            width: 100px;
+            height: 100px;
+            background-image: url('cherryblossom.png'); /* Cherry blossom image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cherry-blossom:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        h2, p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(20)">Day 1</div>
+        <div class="cherry-blossom" onclick="showDay(21)">Day 2</div>
+        <div class="cherry-blossom" onclick="showDay(22)">Day 3</div>
+        <div class="cherry-blossom" onclick="showDay(23)">Day 4</div>
+        <div class="cherry-blossom" onclick="showDay(24)">Day 5</div>
+        <div class="cherry-blossom" onclick="showDay(25)">Day 6</div>
+        <div class="cherry-blossom" onclick="showDay(26)">Day 7</div>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- Day descriptions -->
+    <div id="day-descriptions">
+        <div id="day-20" class="hidden">
+            <p>SAT, MAR 9, 2024 - SUN, JUN 2, 2024</p>
+            <h2>ISEKAL: Blooming Parallel</h2>
+            <p>ARTECHOUSE DC
+                1238 Maryland Avenue SW
+                Washington, DC 20024</p>
+        </div>
+        <div id="day-21" class="hidden">
+            <p>SAT, APR 13, 2024 - SUN, APR 14, 2024</p>
+            <h2>Sakura Matsuri - Japanese
+                Street Festival</h2>
+            <p>Pennsylvania Avenue, NW - Between 3rd and 7th Streets
+                Washington, DC 20001
+                </p>
+        </div>
+        <div id="day-22" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>Kimonos and Cocktails</h2>
+            <p>1500 and 1600 Blocks of 17th Street, NW</p>
+        </div>
+        <!-- Add more day descriptions as needed -->
+        <div id="day-23" class="hidden">
+            <p>SUN, APR 7, 2024</p>
+            <h2>The Cherry Blossom Tea Party in Dupont Circle</h2>
+            <p>Dupont Circle Park</p>
+        </div>
+        <div id="day-24" class="hidden">
+            <p>SUN, APR 7, 2024</p>
+            <h2>Blossom Block Fest: Flea
+                DC</h2>
+            <p>1110 Oak Drive Southeast
+                Washington, DC 20032</p>
+        </div>
+        <div id="day-25" class="hidden">
+            <p>THU, APR 11, 2024</p>
+            <h2>National Gallery Nights:
+                Flowers After Hours</h2>
+            <p>National Gallery of Art East Building
+                4th Street and Pennsylvania Ave, NW</p>
+        </div>
+        <div id="day-26" class="hidden">
+            <p>SUN, APR 7, 2024</p>
+            <h2>Jazz and Blossoms</h2>
+            <p>Franklin Park
+                1315 I (Eye) STNW
+                Washington, DC 20005</p>
+        </div>
+        <div id="day-27" class="hidden">
+            <p>SAT, APR 6, 2024 - SUN, APR 7,
+                2024</p>
+            <h2>Mosaic District Art Blooms</h2>
+            <p>Mosaic District
+                2910 District Avenue, Fairfax, VA. 22031</p>
+        </div>
+        <div id="day-28" class="hidden">
+            <p>SUN, APR 7, 2024</p>
+            <h2>Japanese Stone Lantern
+                Lighting Ceremony</h2>
+            <p>Japanese Stone Lantern
+                Independence Avenue & 17th St. SW
+                Washington, DC 20037</p>
+        </div>
+        <div id="day-29" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>Pink in the Park: Art of Pink</h2>
+            <p>1330 South Fair Street
+                Arlington, VA 22202</p>
+        </div>
+        <div id="day-30" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>Blossoms and Baseball</h2>
+            <p>Nationals Park
+                1500 South Capitol St. SE</p>
+        </div>
+        <div id="day-31" class="hidden">
+            <p>SAT, APR 6, 2024 - SUN, APR 7, 2024</p>
+            <h2>Credit Union Cherry
+                Blossom 10 Mile, 5K and Half Mile Kids Run</h2>
+            <p>5K and Kids Run - Freedom Plaza, 14th & Pennsylvania Ave. NW
+                10 Mile - Washington Monument</p>
+        </div>
+        <div id="day-1" class="hidden">
+            <p>FRI, APR 5, 2024</p>
+            <h2>Westfield Montgomery
+                Spring Fever Fashion Show </h2>
+            <p>Westfield Montgomery Mall, Nordstrom
+                Wing
+                7101 Democracy Blvd
+                Bethesda, Maryland 20817</p>
+        </div>
+        <div id="day-2" class="hidden">
+            <p>FRI, APR 5, 2024</p>
+            <h2>Spring Sake Festival 2024</h2>
+            <p>Hotel Zena
+                1155 14th St NW, Washington, DC 20005</p>
+        </div>
+        <div id="day-3" class="hidden">
+            <p>THU, APR 4, 2024</p>
+            <h2>Blossom Block Party</h2>
+            <p>Guests can enter 1292 Maryland Ave SW
+                Washington DC 20024</p>
+        </div>
+        <div id="day-4" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>26th Annual National
+                Cherry Blossom Freedom
+                Walk</h2>
+            <p>National Japanese American Memorial to
+                Patriotism During World War II
+                Louisiana, New Jersey, D St., NW
+                Washington, DC 20001</p>
+        </div>
+        <div id="day-5" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>National Gallery of Art
+                First Saturday</h2>
+            <p>National Gallery of Art East Building
+                4th Street and Pennsylvania Ave NW</p>
+        </div>
+        <div id="day-6" class="hidden">
+            <p>TUE, APR 2, 2024 - SAT, APR 6,
+                2024</p>
+            <h2>A Live Cherry Blossom Mural Installation in Dupont Circle Park</h2>
+            <p>Dupont Circle
+                1601 Connecticut Ave. NW
+                Washington, DC</p>
+        </div>
+        <div id="day-7" class="hidden">
+            <p>SAT, MAR 23, 2024 - SUN, APR 7,
+                2024</p>
+            <h2>Tidal Basin Welcome Area
+                & ANA Stage</h2>
+            <p>West Basin Drive SW</p>
+        </div>
+        <div id="day-8" class="hidden">
+            <p>FRI, MAR 22, 2024 - FRI, APR 19,
+                2024</p>
+            <h2>Color Me Pink</h2>
+            <p>Japan Information & Culture Center
+                1150 18th Street NW, Suite 100
+                Washington, DC 20036</p>
+        </div>
+        <div id="day-9" class="hidden">
+            <p>WED, MAR 20, 2024 - SUN, APR
+                14, 2024</p>
+            <h2>Blossom Blast! An Artful Floral Experience</h2>
+            <p>Swampoodle Terrace (1100 3rd Street
+                NE)
+                Uline Arena Sidewalk (3rd and M Streets
+                NE)
+                Third Street Art Garden (1225 3rd Street
+                NE)</p>
+        </div>
+        <div id="day-10" class="hidden">
+            <p>FRI, MAR 22, 2024 - SUN, APR 14,
+                2024</p>
+            <h2>Cherry Blossom
+                Celebration</h2>
+            <p>National Museum of Asian Art
+                11050 Independence Ave. SW
+                Washington, DC 20560</p>
+        </div>
+        <div id="day-11" class="hidden">
+            <p>SAT, APR 13, 2024</p>
+            <h2>The National Cherry Blossom Festival Parade presented by Events DC</h2>
+            <p>Constitution Avenue NW, between 7th and 17th Streets, Washington, DC</p>
+        </div>
+        <div id="day-12" class="hidden">
+            <p>THU, APR 4, 2024</p>
+            <h2>Paws & Petals Yappy Hour</h2>
+            <p>Dacha Beer Garden
+                79 Potomac Ave. SE</p>
+        </div>
+        <div id="day-13" class="hidden">
+            <p>SAT, APR 6, 2024</p>
+            <h2>Petalpalooza</h2>
+            <p>Navy Yard Metro (Dept of Transportation
+                Exit)
+                Fireworks also visible from Anacostia Park</p>
+        </div>
+        <div id="day-14" class="hidden">
+            <p>WED, MAR 20, 2024 - SUN, APR
+                14, 2024</p>
+            <h2>2024 National Cherry
+                Blossom Festival</h2>
+            <p>Washington, DC, and surrounding communities</p>
+        </div>
+        <!-- Add more day descriptions as needed -->
+    </div>
+
+    <!-- Additional rows of buttons -->
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(27)">Day 8</div>
+        <div class="cherry-blossom" onclick="showDay(28)">Day 9</div>
+        <div class="cherry-blossom" onclick="showDay(29)">Day 10</div>
+        <div class="cherry-blossom" onclick="showDay(30)">Day 11</div>
+        <div class="cherry-blossom" onclick="showDay(31)">Day 12</div>
+        <div class="cherry-blossom" onclick="showDay(1)">Day 13</div>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- Additional row of buttons -->
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(2)">Day 14</div>
+        <div class="cherry-blossom" onclick="showDay(3)">Day 15</div>
+        <div class="cherry-blossom" onclick="showDay(4)">Day 16</div>
+        <div class="cherry-blossom" onclick="showDay(5)">Day 17</div>
+        <div class="cherry-blossom" onclick="showDay(6)">Day 18</div>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- Additional row of buttons -->
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(7)">Day 19</div>
+        <div class="cherry-blossom" onclick="showDay(8)">Day 20</div>
+        <div class="cherry-blossom" onclick="showDay(9)">Day 21</div>
+        <div class="cherry-blossom" onclick="showDay(10)">Day 22</div>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- Additional row of buttons -->
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(11)">Day 23</div>
+        <div class="cherry-blossom" onclick="showDay(12)">Day 24</div>
+        <div class="cherry-blossom" onclick="showDay(13)">Day 25</div>
+    </div>
+
+    <!-- Additional row of buttons -->
+    <div class="container">
+        <!-- Cherry blossom buttons -->
+        <div class="cherry-blossom" onclick="showDay(14)">Day 26</div>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <script>
+        function showDay(day) {
+            // Hide all day descriptions
+            var allDays = document.querySelectorAll("#day-descriptions > div");
+            allDays.forEach(function(dayElement) {
+                dayElement.classList.add("hidden");
+            });
+            // Show the selected day description
+            var selectedDay = document.getElementById("day-" + day);
+            selectedDay.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
