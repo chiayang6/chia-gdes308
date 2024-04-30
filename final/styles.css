@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mouth-reflection {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: #cd7a79; /* Light Coral */
+    border-radius: 50%;
+    overflow: hidden;
+    animation: openClose 3s infinite alternate;
+    transform: scaleY(-1); /* Mirror vertically */
+}
+
+.teeth-reflection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tooth-reflection {
+    width: 10px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #000;
+    margin: 2px;
+    position: relative;
+    animation: popUp 1s infinite alternate;
+}
+
+.tooth-reflection:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooth-reflection:hover:before {
+    opacity: 1;
+}
+
+.jaw-reflection {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0; /* Background color of the mouth */
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    animation: openCloseJaw 3s infinite alternate;
+    transform: scaleY(-1); /* Mirror vertically */
+}
+
+@keyframes openClose {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes openCloseJaw {
+    0% {
+        height: 100px;
+    }
+    100% {
+        height: 140px;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.fact-text {
+    color: rgb(200, 103, 120); /* Pink color for paragraph text */
+}
+
